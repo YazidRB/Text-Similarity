@@ -14,7 +14,8 @@ this program asks you to put the path of two files if the path is wrong it tells
 
 ## how does this program calculate similarity ?
 
-![313136623_923871282350086_4320878354353575559_n](https://user-images.githubusercontent.com/75635578/198825753-fb5e1771-d8cd-4a73-92fb-cd78e6ff7644.png)
+![image](https://user-images.githubusercontent.com/75635578/198825914-a2fdbb6f-25d6-4785-b38f-3d80d0eb39a2.png)
+
 
 # Runing 
 
