@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Removing espaces from a string
 vector<string> RemoveDupWord(string s){
     vector<string> words;
     string word ;
@@ -32,6 +33,8 @@ vector<string> RemoveDupWord(string s){
     return words ; 
 }
 
+// read a txt path file and return vector of string 
+// every line of the text is a string element in this vector
 vector<string> readFromFile(string filePath){
 
     vector<string> fileLines;
@@ -49,12 +52,14 @@ vector<string> readFromFile(string filePath){
     return fileLines;
 }
 
+// take a string as an argument and return a LowerCase of it 
 string LowerCase(string s){
     for (int i=0; i < s.length(); i++)
         s[i] = tolower(s[i]);
     return s;
 }
 
+// take a vector has lines as an argument and return a vector every element in the new vector is a word !
 vector<string> linesToWords(vector<string> lines){
     vector <string> words;
     for( auto line = lines.begin() ; line != lines.end(); line ++ ){
@@ -67,6 +72,7 @@ vector<string> linesToWords(vector<string> lines){
 
 }
 
+// take a vector of strings and return a new pair vector has the word and the number of repetition in this text
 vector<pair<string, int>> iteractionCount(vector <string> wordsfile){
     bool addToList = false;
     vector<pair<string, int>> dataFile;
@@ -93,6 +99,7 @@ vector<pair<string, int>> iteractionCount(vector <string> wordsfile){
     return dataFile;
 }
 
+// Main function
 int main () {
 
     // read the path of two files from the user :
@@ -129,6 +136,8 @@ int main () {
     vector<pair<string, int>> dataFile2 = iteractionCount(wordsfile2);
 
 
+    // Calc the Similarity ( Cosin Similarity )
+    // please check it in the link : https://en.wikipedia.org/wiki/Cosine_similarity
     double up = 0.0 ; 
     double downA, downB;
     for(auto data1 : dataFile1){
@@ -147,6 +156,7 @@ int main () {
          downB += data2.second * data2.second;
     }
 
+    // output the result : 
     cout << " the silimarity between this two files is :  " << round((up / (sqrt(downA) * sqrt(downB)))*100)<< "%" << endl ;
 
 
