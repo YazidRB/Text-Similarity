@@ -14,6 +14,7 @@ this code aims to calculate the similarity of two files using the Cosine Similar
 this program asks you to put the path of two files if the path is wrong it tells you "file not found" otherwise the program output the % of Similarity between them !
 
 <br>
+
 ## how does this program calculate similarity ?
 
 ![image](https://user-images.githubusercontent.com/75635578/198825914-a2fdbb6f-25d6-4785-b38f-3d80d0eb39a2.png)
